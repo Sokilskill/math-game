@@ -15,8 +15,16 @@ const MathGame = () => {
 
   const generateRandomNumbers = () => {
     const maxNumber = difficulty === "easy" ? 10 : 20;
-    setNum1(Math.floor(Math.random() * maxNumber));
-    setNum2(Math.floor(Math.random() * maxNumber));
+    let firstNumber = Math.floor(Math.random() * maxNumber);
+    let secondNumber = Math.floor(Math.random() * maxNumber);
+
+    while (secondNumber === 0 || firstNumber === 0) {
+      firstNumber = Math.floor(Math.random() * maxNumber);
+      secondNumber = Math.floor(Math.random() * maxNumber);
+    }
+
+    setNum1(Math.max(firstNumber, secondNumber));
+    setNum2(Math.min(firstNumber, secondNumber));
   };
 
   const checkAnswer = () => {
