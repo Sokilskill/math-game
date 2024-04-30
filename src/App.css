@@ -1,0 +1,56 @@
+.math-game {
+  margin: 0 auto;
+  padding: 0 20px;
+  font-size: 24px;
+  text-align: center;
+  margin-top: 50px;
+}
+
+.list-btn {
+  display: flex;
+  gap: 20px;
+}
+
+.question {
+  margin-bottom: 20px;
+}
+
+input {
+  font-size: 24px;
+  width: 50px;
+  margin: 0 10px;
+}
+
+.feedback {
+  margin-top: 20px;
+  font-size: 18px;
+  animation: fadeIn 1.5s;
+}
+.success {
+  color: green;
+}
+.error {
+  color: red;
+}
+select {
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: #1b4915;
+  cursor: pointer;
+  transition: border-color 0.25s;
+}
+select:hover {
+  border-color: #63eb75;
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
