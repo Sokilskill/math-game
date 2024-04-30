@@ -1,30 +1,33 @@
-# React + TypeScript + Vite
+# Гра у математику
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Це проста гра у математику, побудована за допомогою React. Вона генерує випадкові математичні завдання для додавання, віднімання, множення та ділення.
 
-Currently, two official plugins are available:
+## Особливості
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- Чотири операції: додавання, віднімання, множення та ділення.
+- Два рівні складності: легкий та важкий.
+- Зворотній зв'язок щодо правильності відповіді.
+- Можливість створення нового завдання.
+- Валідація для уникнення значень 0 у рівнянні.
 
-## Expanding the ESLint configuration
+## Використання
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+- Виберіть операцію (додавання, віднімання, множення або ділення), натиснувши на відповідну кнопку.
+- Виберіть рівень складності (легкий або важкий) зі списку.
+- Введіть вашу відповідь у поле введення та натисніть "Перевірити", щоб перевірити.
+- Якщо відповідь вірна, ви побачите повідомлення про успіх. В іншому випадку ви побачите повідомлення про помилку.
+- Натисніть "Нове завдання", щоб згенерувати нове математичне завдання.
 
-- Configure the top-level `parserOptions` property like this:
+## Допомога
 
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
+Внески вітаються! Запрошуємо вас відкривати нові питання або надсилати запити на злиття для будь-яких вдосконалень або виправлень помилок.
+
+## Початок роботи
+
+Щоб запустити цей проект локально, виконайте такі кроки:
+
+```bash
+cd math-game
+npm install
+npm run dev
 ```
-
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
